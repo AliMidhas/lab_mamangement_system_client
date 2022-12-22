@@ -76,11 +76,14 @@ const CubeTest = () => {
 
   const showCubes = () => {
     axios
-      .get("http://labmanagementsystemapi-production.up.railway.app/api/cube", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      })
+      .get(
+        "https://labmanagementsystemapi-production.up.railway.app/api/cube",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      )
       .then((res) => {
         setCubes([...res.data.cubes]);
       })
@@ -170,7 +173,7 @@ const CubeTest = () => {
   const statusHandle = (index, id, value) => {
     axios
       .post(
-        `http://labmanagementsystemapi-production.up.railway.app/api/cube/${id}/status`,
+        `https://labmanagementsystemapi-production.up.railway.app/api/cube/${id}/status`,
         { status: value },
         {
           headers: {
@@ -191,7 +194,7 @@ const CubeTest = () => {
   const openEditModalHandle = (id) => {
     axios
       .get(
-        `http://labmanagementsystemapi-production.up.railway.app/api/cube/${id}`,
+        `https://labmanagementsystemapi-production.up.railway.app/api/cube/${id}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -208,7 +211,7 @@ const CubeTest = () => {
   const openShowModalHandle = (id) => {
     axios
       .get(
-        `http://labmanagementsystemapi-production.up.railway.app/api/cube/${id}`,
+        `https://labmanagementsystemapi-production.up.railway.app/api/cube/${id}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,
@@ -225,7 +228,7 @@ const CubeTest = () => {
   const openDeleteDialogHandle = (id) => {
     axios
       .get(
-        `http://labmanagementsystemapi-production.up.railway.app/api/cube/${id}`,
+        `https://labmanagementsystemapi-production.up.railway.app/api/cube/${id}`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,

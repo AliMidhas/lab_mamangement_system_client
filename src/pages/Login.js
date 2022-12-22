@@ -36,7 +36,7 @@ const Login = () => {
 
     axios
       .post(
-        "http://labmanagementsystemapi-production.up.railway.app/api/auth/login",
+        "https://labmanagementsystemapi-production.up.railway.app/api/auth/login",
         credentials
       )
       .then((res) => {
