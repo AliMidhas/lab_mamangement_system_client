@@ -37,6 +37,7 @@ const Login = () => {
     axios
       .post(
         "https://labmanagementsystemapi-production.up.railway.app/api/auth/login",
+        { referrerPolicy: "unsafe_url" },
         credentials
       )
       .then((res) => {
