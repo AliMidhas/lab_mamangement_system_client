@@ -66,7 +66,7 @@ const AddCube = ({ isOpen, onClose, showCubes }) => {
     const addedCube = { ...cube, tests: cubeTests };
     axios
       .post(
-        "https://labmanagementsystemapi-production.up.railway.app/api/cube/store",
+        "https://labmanagementsystemapi-production.up.railway.app/api/cube/store/",
         addedCube,
         {
           headers: {

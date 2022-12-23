@@ -20,7 +20,7 @@ const DeleteDialog = ({ isOpen, onClose, showCubes }) => {
   const deleteCube = () => {
     axios
       .get(
-        `https://labmanagementsystemapi-production.up.railway.app/api/cube/delete/${cube.id}`,
+        `https://labmanagementsystemapi-production.up.railway.app/api/cube/delete/${cube.id}/`,
         {
           headers: {
             Authorization: `Bearer ${user.token}`,

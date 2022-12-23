@@ -41,7 +41,7 @@ const EditCube = ({ isOpen, onClose, showCubes }) => {
     console.log(cubeTests);
     axios
       .post(
-        `https://labmanagementsystemapi-production.up.railway.app/api/cube/update/${cube.id}`,
+        `https://labmanagementsystemapi-production.up.railway.app/api/cube/update/${cube.id}/`,
         updatedCube,
         {
           headers: {
